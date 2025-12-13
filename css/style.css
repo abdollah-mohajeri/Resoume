@@ -1322,3 +1322,153 @@ section.resume-section .resume-item .resume-date {
         margin-bottom: 10px !important;
     }
 }
+
+
+/*==================================================
+        CERTIFICATES STYLE 
+====================================================*/
+
+#certificates {
+    background-color: #ffffff;
+}
+
+.cert-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    /* سایه کمی ملایم‌تر */
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    /* خط طلایی سمت چپ */
+    border-left: 4px solid #d4af37;
+    /* کمی باریک‌تر شد */
+}
+
+.cert-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* --- تغییر سایز عکس (کوچکتر شد) --- */
+
+.cert-img-wrapper {
+    position: relative;
+    height: 170px;
+    /* قبلا 220px بود -> الان 170px */
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+}
+
+.cert-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+
+/* لایه هاور */
+
+.cert-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cert-overlay span {
+    color: #fff;
+    margin-top: 8px;
+    font-size: 0.9rem;
+    /* متن کوچکتر */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cert-card:hover .cert-overlay {
+    opacity: 1;
+}
+
+.cert-card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* --- تغییر سایز متن و پدینگ (جمع‌وجورتر) --- */
+
+.cert-body {
+    padding: 12px 15px;
+    /* پدینگ کمتر شد (قبلا 20px بود) */
+    display: flex;
+    align-items: center;
+}
+
+
+/* آیکون دایره‌ای کوچکتر */
+
+.cert-icon {
+    width: 40px;
+    /* قبلا 50px */
+    height: 40px;
+    /* قبلا 50px */
+    background-color: #fcf8e3;
+    color: #d4af37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    /* آیکون کوچکتر */
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.cert-content h5 {
+    font-size: 1rem;
+    /* فونت تیتر کوچکتر */
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2px;
+    line-height: 1.2;
+}
+
+.cert-issuer {
+    display: block;
+    font-size: 0.85rem;
+    color: #2196f3;
+    font-weight: 600;
+}
+
+.cert-date {
+    display: block;
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 1px;
+}
+
+.text-warning {
+    color: #ffc107 !important;
+}
+
+
+/* فاصله در موبایل */
+
+@media (max-width: 991px) {
+    .cert-card {
+        margin-bottom: 20px;
+    }
+}
