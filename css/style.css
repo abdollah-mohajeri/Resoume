@@ -977,6 +977,20 @@ section.resume-section .resume-item .resume-date {
 }
 
 
+/* --- اصلاح فاصله کارت‌های Awards در ریسپانسیو --- */
+
+@media (max-width: 991px) {
+    /* وقتی صفحه کوچک می‌شود */
+    #awards .col-md-6 {
+        margin-bottom: 30px !important;
+        /* فاصله اجباری */
+    }
+    /* آخرین آیتم هر ردیف در بوت استرپ */
+    #awards .col-md-6:last-child {
+        margin-bottom: 0 !important;
+    }
+}
+
 
 /*==================================================
            FANTASY MINIMAL CONTACT STYLE
