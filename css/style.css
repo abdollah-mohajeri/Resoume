@@ -977,3 +977,153 @@ section.resume-section .resume-item .resume-date {
 }
 
 
+
+/*==================================================
+           FANTASY MINIMAL CONTACT STYLE
+====================================================*/
+
+#contact {
+    background-color: #fcfcfc;
+    /* سفید خیلی خیلی ملایم */
+}
+
+.fantasy-card-link {
+    text-decoration: none !important;
+    display: block;
+    height: 100%;
+}
+
+
+/* استایل کلی کارت */
+
+.fantasy-card {
+    background: #ffffff;
+    border-radius: 25px;
+    /* گوشه‌های خیلی گرد (فانتزی) */
+    padding: 30px 15px;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+    /* سایه خیلی محو */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* حرکت فنری */
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+
+/* هاور روی کارت: بالا آمدن و سایه رنگی */
+
+.fantasy-card-link:hover .fantasy-card {
+    transform: translateY(-8px);
+}
+
+
+/* استایل آیکون */
+
+.icon-box {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: inline-block;
+    /* انیمیشن معلق بودن دائمی */
+    animation: float 3s ease-in-out infinite;
+}
+
+
+/* انیمیشن معلق بودن (Floating) */
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+/* متن‌ها */
+
+.fantasy-card h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.fantasy-card p {
+    font-size: 0.85rem;
+    color: #999;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* --- رنگ‌بندی اختصاصی برای هر کارت (مینیمال) --- */
+
+
+/* 1. ایمیل (قرمز ملایم/نارنجی) */
+
+.email-style .icon-box {
+    color: #ff6b6b;
+}
+
+.fantasy-card-link:hover .email-style {
+    box-shadow: 0 15px 30px rgba(255, 107, 107, 0.15);
+    border-color: rgba(255, 107, 107, 0.2);
+}
+
+
+/* 2. لینکدین (آبی) */
+
+.linkedin-style .icon-box {
+    color: #0077b5;
+}
+
+.fantasy-card-link:hover .linkedin-style {
+    box-shadow: 0 15px 30px rgba(0, 119, 181, 0.15);
+    border-color: rgba(0, 119, 181, 0.2);
+}
+
+
+/* 3. گیت‌هاب (بنفش تیره/سیاه) */
+
+.github-style .icon-box {
+    color: #333;
+}
+
+.fantasy-card-link:hover .github-style {
+    box-shadow: 0 15px 30px rgba(51, 51, 51, 0.15);
+    border-color: rgba(51, 51, 51, 0.2);
+}
+
+
+/* 4. تلفن (سبز) */
+
+.phone-style .icon-box {
+    color: #2ecc71;
+}
+
+.fantasy-card-link:hover .phone-style {
+    box-shadow: 0 15px 30px rgba(46, 204, 113, 0.15);
+    border-color: rgba(46, 204, 113, 0.2);
+}
+
+
+/* --- اصلاح فاصله در موبایل --- */
+
+@media (max-width: 991px) {
+    /* وقتی صفحه کوچک است (موبایل و تبلت) */
+    #contact .col-md-6 {
+        margin-bottom: 25px !important;
+        /* فاصله اجباری 25 پیکسلی */
+    }
+    /* حذف فاصله از آخرین کارت که نیازی به فاصله پایین ندارد */
+    #contact .col-md-6:last-child {
+        margin-bottom: 0 !important;
+    }
+}
