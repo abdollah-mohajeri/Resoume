@@ -786,3 +786,194 @@ section.resume-section .resume-item .resume-date {
     width: 100%;
     position: absolute;
 }
+
+
+/*==================================================
+                  AWARDS & LIGHTBOX STYLE
+====================================================*/
+
+#awards {
+    background-color: #f9f9f9;
+    /* پدینگ‌ها تنظیم شده تا ارتفاع سکشن کم باشد و بخش دوم دیده شود */
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+
+.award-heading {
+    font-size: 1.5rem;
+    border-left: 5px solid #2196f3;
+    padding-left: 15px;
+    color: #343a40;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+/* --- استایل کارت --- */
+
+.award-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    /* سایه ملایم */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e1e1e1;
+    display: flex;
+    flex-direction: column;
+}
+
+.award-card:hover {
+    transform: translateY(-5px);
+    /* حرکت به بالا هنگام موس */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* --- بخش عکس کارت --- */
+
+.award-gallery {
+    width: 100%;
+    height: 150px;
+    /* ارتفاع ثابت و کم برای جمع‌وجور شدن */
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    cursor: pointer;
+    /* نشانگر دست */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.award-gallery img {
+    max-height: 90%;
+    /* عکس کامل در کادر جا شود */
+    max-width: 90%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+
+/* زوم خفیف روی عکس هنگام هاور */
+
+.award-gallery:hover img {
+    transform: scale(1.1);
+}
+
+
+/* آیکون ذره‌بین */
+
+.click-hint {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    /* مخفی در حالت عادی */
+    background: rgba(33, 150, 243, 0.85);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
+
+.award-gallery:hover .click-hint {
+    transform: translate(-50%, -50%) scale(1);
+    /* نمایش هنگام هاور */
+}
+
+
+/* --- بخش متن کارت --- */
+
+.award-body {
+    padding: 12px 15px;
+}
+
+.award-body h5 {
+    font-size: 1.1rem;
+    color: #2196f3;
+    font-weight: 700;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* سه نقطه اگر متن طولانی بود */
+}
+
+.award-date {
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.award-body p {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+
+/* --- استایل مودال (پنجره زوم) --- */
+
+.custom-lightbox {
+    position: fixed;
+    z-index: 10000;
+    /* خیلی بالا باشد */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* تنظیمات مخفی بودن */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-lightbox.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-image {
+    max-width: 90%;
+    max-height: 90vh;
+    border: 4px solid #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+    transform: scale(0.8);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.custom-lightbox.show .lightbox-image {
+    transform: scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #2196f3;
+}
+
+
