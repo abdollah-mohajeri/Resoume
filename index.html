@@ -50,6 +50,12 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
                 </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
                 </li>
@@ -398,6 +404,77 @@
 
 
 
+        <!--==================================================
+              EDUCATION 
+====================================================-->
+
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+            <div class="my-auto">
+                <h2 class="mb-5">Education</h2>
+
+                <!-- کادر اصلی دانشگاهی -->
+                <div class="edu-card d-flex flex-column flex-md-row mb-5">
+
+                    <!-- بخش عکس مدرک (سمت چپ) -->
+                    <div class="edu-img-container mr-md-4 mb-4 mb-md-0" onclick="openModal(this)">
+                        <!-- نام عکس را اگر تغییر دادید اینجا اصلاح کنید -->
+                        <img src="img/portfolio/Bachelor.jpg" alt="Bachelor Degree" class="img-fluid edu-img">
+
+                        <!-- روبان رسمی (Legalized Ribbon) -->
+                        <div class="legal-ribbon">
+                            <span>JUSTICE & MFA SEALED</span>
+                        </div>
+
+                        <!-- لایه هاور -->
+                        <div class="edu-overlay">
+                            <i class="fa fa-search-plus fa-2x"></i>
+                        </div>
+                    </div>
+
+                    <!-- بخش توضیحات (سمت راست) -->
+                    <div class="edu-content w-100">
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-2">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-graduation-cap fa-2x text-primary mr-3 edu-icon"></i>
+                                <div>
+                                    <h3 class="mb-0">Bachelor of Accounting</h3>
+                                    <!-- نام دقیق دانشگاه به انگلیسی -->
+                                    <div class="subheading">Rahbord Shomal Institute of Higher Education</div>
+                                </div>
+                            </div>
+                            <div class="resume-date text-md-right">
+                                <span class="text-primary font-weight-bold">2012-2014</span>
+                            </div>
+                        </div>
+
+                        <hr class="edu-divider">
+
+                        <div class="edu-description">
+                            <p>
+                                Although my career path evolved into Software Engineering, my academic foundation in Accounting provided me with a critical advantage: <strong>Domain Knowledge</strong>. I possess a deep understanding of financial workflows,
+                                ledger systems, and business logic, which allows me to architect complex <strong>Fintech</strong> and <strong>ERP solutions</strong> with precision. This unique blend of financial literacy and technical expertise enables
+                                me to bridge the gap between business requirements and backend implementation effectively.
+                            </p>
+
+                            <!-- تگ‌های پایین -->
+                            <div class="edu-tags mt-3">
+                                <span class="badge badge-light border">Financial Analysis</span>
+                                <span class="badge badge-light border">Business Logic</span>
+                                <span class="badge badge-light border">ERP Architecture</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+
         <!--====================================================
                         SKILLS
     ======================================================-->
@@ -557,11 +634,15 @@
 
                         <!-- کارت 1 -->
                         <div class="col-lg-4 col-md-6 mb-4">
-                            <!-- کلاس mb-4 برای فاصله اضافه شد -->
                             <div class="award-card h-100">
                                 <div class="award-gallery" onclick="openModal(this)">
                                     <img src="img/portfolio/amozesh.jpg" alt="Award 1" class="img-fluid" />
                                     <span class="click-hint"><i class="fa fa-search-plus"></i></span>
+
+                                    <!-- بج جدید: Editors' Choice -->
+                                    <div style="position: absolute; top: 10px; right: 10px; background: #e67e22; color: white; padding: 4px 10px; font-size: 0.7rem; border-radius: 20px; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                                        <i class="fa fa-trophy" style="margin-right: 4px;"></i> Editors' Choice
+                                    </div>
                                 </div>
                                 <div class="award-body">
                                     <h5>MODULAR OOP ARCHITECTURE</h5>
@@ -577,6 +658,11 @@
                                 <div class="award-gallery" onclick="openModal(this)">
                                     <img src="img/portfolio/dastan-taraneh.jpg" alt="Award 2" class="img-fluid" />
                                     <span class="click-hint"><i class="fa fa-search-plus"></i></span>
+
+                                    <!-- بج جدید -->
+                                    <div style="position: absolute; top: 10px; right: 10px; background: #e67e22; color: white; padding: 4px 10px; font-size: 0.7rem; border-radius: 20px; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                                        <i class="fa fa-trophy" style="margin-right: 4px;"></i> Editors' Choice
+                                    </div>
                                 </div>
                                 <div class="award-body">
                                     <h5>ENGINEERING EXCELLENCE & ARCHITECTURE</h5>
@@ -592,6 +678,11 @@
                                 <div class="award-gallery" onclick="openModal(this)">
                                     <img src="img/portfolio/qasre roman.jpg" alt="Award 3" class="img-fluid" />
                                     <span class="click-hint"><i class="fa fa-search-plus"></i></span>
+
+                                    <!-- بج جدید -->
+                                    <div style="position: absolute; top: 10px; right: 10px; background: #e67e22; color: white; padding: 4px 10px; font-size: 0.7rem; border-radius: 20px; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                                        <i class="fa fa-star" style="margin-right: 4px;"></i> Featured App
+                                    </div>
                                 </div>
                                 <div class="award-body">
                                     <h5>ALGORITHMIC EFFICIENCY</h5>
@@ -607,6 +698,11 @@
                                 <div class="award-gallery" onclick="openModal(this)">
                                     <img src="img/portfolio/fairy.jpg" alt="Award 3" class="img-fluid" />
                                     <span class="click-hint"><i class="fa fa-search-plus"></i></span>
+
+                                    <!-- بج جدید -->
+                                    <div style="position: absolute; top: 10px; right: 10px; background: #e67e22; color: white; padding: 4px 10px; font-size: 0.7rem; border-radius: 20px; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                                        <i class="fa fa-bolt" style="margin-right: 4px;"></i> Performance Award
+                                    </div>
                                 </div>
                                 <div class="award-body">
                                     <h5>PERFORMANCE & OPTIMIZATION</h5>
@@ -634,12 +730,16 @@
                                 <div class="award-gallery" onclick="openModal(this)">
                                     <img src="img/portfolio/search dastan tarsneh.jpg" alt="Rank 1" class="img-fluid" />
                                     <span class="click-hint"><i class="fa fa-search-plus"></i></span>
+
+                                    <!-- بج جدید: #1 Rank -->
+                                    <div style="position: absolute; top: 10px; right: 10px; background: #27ae60; color: white; padding: 4px 10px; font-size: 0.7rem; border-radius: 20px; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                                        <i class="fa fa-line-chart" style="margin-right: 4px;"></i> #1 Ranked
+                                    </div>
                                 </div>
                                 <div class="award-body">
                                     <h5>WIDEST USER ADOPTION</h5>
                                     <span class="award-date">2019</span>
-                                    <p>These two apps achieved the highest install rate and popularity in the entire category. This was achieved due to clean code implementation and innovative features with minimal memory footprint. One app has over 1 million
-                                        installs and the other has over 600,000 installs. They earned the #1 spot.</p>
+                                    <p>These two apps achieved the highest install rate and popularity in the entire category. This was achieved due to clean code implementation and innovative features with minimal memory footprint.</p>
                                 </div>
                             </div>
                         </div>
@@ -650,6 +750,11 @@
                                 <div class="award-gallery" onclick="openModal(this)">
                                     <img src="img/portfolio/search qasre roman.jpg" alt="Rank 2" class="img-fluid" />
                                     <span class="click-hint"><i class="fa fa-search-plus"></i></span>
+
+                                    <!-- بج جدید -->
+                                    <div style="position: absolute; top: 10px; right: 10px; background: #27ae60; color: white; padding: 4px 10px; font-size: 0.7rem; border-radius: 20px; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                                        <i class="fa fa-money" style="margin-right: 4px;"></i> Top Grossing
+                                    </div>
                                 </div>
                                 <div class="award-body">
                                     <h5>TOP GROSSING DATA ARCHITECTED APP</h5>
@@ -665,11 +770,16 @@
                                 <div class="award-gallery" onclick="openModal(this)">
                                     <img src="img/portfolio/search 50 qesse.jpg" alt="Rank 3" class="img-fluid" />
                                     <span class="click-hint"><i class="fa fa-search-plus"></i></span>
+
+                                    <!-- بج جدید -->
+                                    <div style="position: absolute; top: 10px; right: 10px; background: #27ae60; color: white; padding: 4px 10px; font-size: 0.7rem; border-radius: 20px; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                                        <i class="fa fa-search" style="margin-right: 4px;"></i> Top Search
+                                    </div>
                                 </div>
                                 <div class="award-body">
                                     <h5>#1 KEYWORD SEARCH PERFORMANCE</h5>
                                     <span class="award-date">2018</span>
-                                    <p>Achieved Rank #1 in category keyword searches across a major national market. Success attributed to highly optimized installation package size and exceptional stability for mass deployment.</p>
+                                    <p>Achieved Rank #1 in category keyword searches across a major national market. Success attributed to highly optimized installation package size and exceptional stability.</p>
                                 </div>
                             </div>
                         </div>
@@ -677,15 +787,14 @@
                     </div>
                 </div>
 
-            </div>
-
-            <!-- پنجره مودال (Lightbox) -->
-            <div id="lightbox-modal" class="custom-lightbox" onclick="closeModal()">
-                <span class="close-btn">&times;</span>
-                <img class="lightbox-image" id="lightbox-img" src="">
-            </div>
+                <!-- پنجره مودال (Lightbox) -->
+                <div id="lightbox-modal" class="custom-lightbox" onclick="closeModal()">
+                    <span class="close-btn">&times;</span>
+                    <img class="lightbox-image" id="lightbox-img" src="">
+                </div>
 
         </section>
+
 
         <!--====================================================
                          CERTIFICATIONS
