@@ -245,12 +245,13 @@ section.resume-section .resume-item .resume-date {
 }
 
 
-/*====================================================
-                   PORTFOLIO
-======================================================*/
+/*==================================================
+                 PORTFOLIO STYLE 
+====================================================*/
 
 #portfolio {
-    padding: 100px 0;
+    padding: 80px 0;
+    background-color: #fff;
 }
 
 .port-head-cont {
@@ -262,10 +263,15 @@ section.resume-section .resume-item .resume-date {
     margin: 5px 2px;
 }
 
+
+/* فاصله آیتم‌ها */
+
 #portfolio .portfolio-item {
-    right: 0;
-    margin: 0 0 15px;
+    padding: 0 10px;
 }
+
+
+/* --- استایل کارت‌ها (بدون دستکاری مودال) --- */
 
 #portfolio .portfolio-item .portfolio-link {
     position: relative;
@@ -273,22 +279,47 @@ section.resume-section .resume-item .resume-date {
     max-width: 400px;
     margin: 0 auto;
     cursor: pointer;
+    /* زیبایی بصری */
+    border-radius: 15px;
+    /* گوشه‌های گرد */
+    overflow: hidden;
+    /* مهم برای اینکه عکس از کادر بیرون نزند */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* سایه */
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
 }
+
+
+/* افکت هاور */
+
+#portfolio .portfolio-item .portfolio-link:hover {
+    transform: translateY(-5px);
+    /* بالا آمدن */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* لایه آبی رنگ روی عکس */
 
 #portfolio .portfolio-item .portfolio-link .caption-port {
     position: absolute;
     width: 100%;
     height: 100%;
     -webkit-transition: all ease 0.5s;
-    -moz-transition: all ease 0.5s;
     transition: all ease 0.5s;
     opacity: 0;
-    background: rgba(54, 160, 245, 0.73);
+    background: rgba(33, 150, 243, 0.85);
+    /* چون لایه والد overflow:hidden دارد، نیازی به radius اینجا نیست اما محض احتیاط: */
+    border-radius: 10px;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption-port:hover {
     opacity: 1;
 }
+
+
+/* تنظیمات آیکون ذره‌بین */
 
 #portfolio .portfolio-item .portfolio-link .caption-port .caption-port-content {
     font-size: 20px;
@@ -305,20 +336,26 @@ section.resume-section .resume-item .resume-date {
     margin-top: -12px;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption-port .caption-port-content h3,
-#portfolio .portfolio-item .portfolio-link .caption-port .caption-port-content h4 {
-    margin: 0;
-}
 
-#portfolio * {
-    z-index: 2;
-}
+/* تنظیم فاصله در موبایل */
 
-@media (min-width: 767px) {
+@media (max-width: 767px) {
     #portfolio .portfolio-item {
-        margin: 0 0 30px;
+        margin-bottom: 30px !important;
+        /* فاصله قطعی در موبایل */
     }
 }
+
+
+/* --- ترفند نمایش اولویت‌دار آیتم‌های وب --- */
+
+#portfolio .portfolio-item.web {
+    order: -1;
+    /* این باعث می‌شود آیتم‌های وب اول صف بایستند */
+}
+
+
+/* ---------------------------------------- */
 
 .portfolio-modal .modal-dialog {
     max-width: 100%;
@@ -1139,5 +1176,149 @@ section.resume-section .resume-item .resume-date {
     /* حذف فاصله از آخرین کارت که نیازی به فاصله پایین ندارد */
     #contact .col-md-6:last-child {
         margin-bottom: 0 !important;
+    }
+}
+
+
+/*==================================================
+                 SKILLS 3D STYLE (FIXED)
+====================================================*/
+
+#skills {
+    background-image: url("../img/bg-stats.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding: 0;
+}
+
+.skill-overlay {
+    background-color: rgba(30, 30, 30, 0.9);
+    /* کمی تاریک‌تر برای خوانایی */
+    min-height: 100%;
+    width: 100%;
+    /* پدینگ بالا و پایین برای اینکه محتوا نچسبد */
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+}
+
+
+/* --- اصلاح فاصله ستون‌ها (جلوگیری از روی هم افتادن) --- */
+
+#skills .col-6,
+#skills .col-md-6,
+#skills .col-lg-3 {
+    margin-bottom: 30px !important;
+    /* فاصله قطعی */
+}
+
+
+/* --- کانتینر اصلی کارت --- */
+
+.skill-flip-container {
+    background-color: transparent;
+    width: 100%;
+    height: 130px;
+    /* ارتفاع مناسب */
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.skill-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.skill-flip-container:hover .skill-flip-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* --- استایل مشترک جلو و عقب --- */
+
+.skill-front,
+.skill-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    /* گردتر */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* --- جلوی کارت --- */
+
+.skill-front {
+    background-color: rgba(255, 255, 255, 0.08);
+    /* خیلی شفاف */
+    backdrop-filter: blur(5px);
+    /* بلور شیشه‌ای */
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-front i {
+    color: #2196f3;
+}
+
+.skill-front h5 {
+    color: #2196f3 !important;
+    /* رنگ آبی (همرنگ آیکون) */
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* --- پشت کارت --- */
+
+.skill-back {
+    background-color: #2196f3;
+    color: white;
+    transform: rotateY(180deg);
+    border: 1px solid #2196f3;
+}
+
+.skill-back span {
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+
+/* --- تنظیمات موبایل --- */
+
+@media (max-width: 576px) {
+    .skill-flip-container {
+        height: 110px;
+        /* ارتفاع کمتر در موبایل */
+    }
+    .skill-front h5 {
+        color: #2196f3 !important;
+        /* رنگ آبی (همرنگ آیکون) */
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin: 0;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    .skill-front i {
+        font-size: 2em;
+        margin-bottom: 10px !important;
     }
 }
