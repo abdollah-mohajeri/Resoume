@@ -1472,3 +1472,145 @@ section.resume-section .resume-item .resume-date {
         margin-bottom: 20px;
     }
 }
+
+
+/*==================================================
+              EDUCATION STYLE (ACADEMIC)
+====================================================*/
+
+#education {
+    background-color: #fafafa;
+    /* پس زمینه کمی متفاوت */
+}
+
+.edu-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid #2196f3;
+    /* خط آبی کلاسیک سمت چپ */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.edu-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/* --- استایل عکس مدرک --- */
+
+.edu-img-container {
+    position: relative;
+    width: 280px;
+    /* عرض ثابت برای عکس */
+    height: 200px;
+    flex-shrink: 0;
+    /* جلوگیری از جمع شدن */
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.edu-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.edu-img-container:hover .edu-img {
+    transform: scale(1.05);
+}
+
+
+/* لایه هاور ساده */
+
+.edu-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 150, 243, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: white;
+}
+
+.edu-img-container:hover .edu-overlay {
+    opacity: 1;
+}
+
+
+/* --- روبان رسمی (Legalized Ribbon) --- */
+
+.legal-ribbon {
+    position: absolute;
+    top: 20px;
+    left: -25px;
+    /* تنظیم دقیق برای گوشه */
+    width: 120px;
+    height: 30px;
+    background: #27ae60;
+    /* سبز رسمی */
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    transform: rotate(-45deg);
+    /* چرخش کج */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    letter-spacing: 0.5px;
+}
+
+
+/* --- محتوای متنی --- */
+
+.edu-icon {
+    color: #343a40 !important;
+    /* رنگ کلاه فارغ التحصیلی مشکی/خاکستری */
+    margin-right: 15px;
+}
+
+.edu-divider {
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+.edu-description p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    text-align: justify;
+}
+
+.edu-tags .badge {
+    padding: 8px 12px;
+    margin-right: 5px;
+    color: #555;
+    font-weight: 500;
+    background-color: #f8f9fa;
+}
+
+
+/* --- ریسپانسیو --- */
+
+@media (max-width: 767px) {
+    .edu-img-container {
+        width: 100%;
+        /* در موبایل عکس تمام عرض شود */
+        height: 220px;
+    }
+    .legal-ribbon {
+        left: -10px;
+        /* تنظیم مجدد روبان در موبایل */
+    }
+}
