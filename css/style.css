@@ -1614,3 +1614,21 @@ section.resume-section .resume-item .resume-date {
         /* تنظیم مجدد روبان در موبایل */
     }
 }
+
+.award-gallery {
+    background-color: #f8f9fa !important;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    /* ایجاد پدینگ برای اینکه عکس به لبه‌ها نچسبد */
+    position: relative;
+    overflow: hidden;
+}
+
+.award-gallery img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
