@@ -1632,3 +1632,66 @@ section.resume-section .resume-item .resume-date {
     max-width: 100%;
     object-fit: contain;
 }
+
+
+/*==================================================
+            EDUCATION PROJECT REFERRAL
+====================================================*/
+
+.edu-project-referral {
+    perspective: 1000px;
+}
+
+.project-link-box {
+    display: block;
+    background: #f0f7ff;
+    /* آبی خیلی کمرنگ */
+    border: 1px dashed #2196f3;
+    /* کادر نقطه چین برای جلب توجه */
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.project-link-box:hover {
+    background: #e3f2fd;
+    transform: translateX(5px);
+    /* حرکت جزیی به سمت راست */
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.1);
+    border-style: solid;
+}
+
+.project-icon-box {
+    width: 40px;
+    height: 40px;
+    background: #2196f3;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.project-text-box h5 {
+    color: #2196f3;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.project-text-box p {
+    color: #666 !important;
+    margin: 0;
+}
+
+.arrow-icon {
+    color: #2196f3;
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+
+.project-link-box:hover .arrow-icon {
+    opacity: 1;
+}
