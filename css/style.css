@@ -1696,32 +1696,3 @@ section.resume-section .resume-item .resume-date {
     opacity: 1;
 }
 
-
-/*==================================================
-            CREDLY
-====================================================*/
-
-
-
-.btn-credly {
-    display: inline-block;
-    background-color: #0e2f44;
-    color: #fff;
-    padding: 12px 32px;
-    border-radius: 50px;
-    font-weight: 600;
-    text-decoration: none;
-    letter-spacing: 0.5px;
-    border: 2px solid #0e2f44;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    transition: all 0.3s ease;
-}
-
-.btn-credly:hover {
-    background-color: transparent;
-    color: #0e2f44;
-    text-decoration: none;
-    transform: translateY(-2px);
-}
-
-چند نکته:
